@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import CardAdicionar from "./components/CardAdicionar";
+import ListItem from "./components/ListItem";
 
 function App() {
   const [listaTarefas, setListaTarefas] = useState([]);
@@ -20,6 +21,18 @@ function App() {
   return (
     <>
       <CardAdicionar adicionarTarefa={adicionarTarefa} />
+
+      <h1>Lista de Tarefas</h1>
+      <div>
+        {listaTarefas.map((tarefa) => (
+          <ListItem
+            textoTarefa={tarefa.textoTarefa}
+            key={tarefa.id}
+            id={tarefa.id}
+            finalizado={tarefa.finalizado}
+          />
+        ))}
+      </div>
     </>
   );
 }
