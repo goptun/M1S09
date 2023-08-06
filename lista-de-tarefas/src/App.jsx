@@ -3,7 +3,13 @@ import "./App.css";
 import CardAdicionar from "./components/CardAdicionar";
 
 function App() {
-  return <></>;
+  const [listaTarefas, setListaTarefas] = useState([]);
+
+  return (
+    <>
+      <CardAdicionar />
+    </>
+  );
 }
 
 export default App;
