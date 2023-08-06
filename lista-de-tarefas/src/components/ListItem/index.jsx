@@ -10,8 +10,18 @@ function ListItem(props) {
       <h3 className={finalizado ? "marcar-finalizado" : ""}>
         {props.textoTarefa}
       </h3>
-      <button onClick={() => setFinalizado(!finalizado)}>Finalizar</button>
-      <button onClick={() => props.removerTarefa(props.id)}>Remover</button>
+      <button
+        className="botao-lista"
+        onClick={() => setFinalizado(!finalizado)}
+      >
+        Finalizar
+      </button>
+      <button
+        className="botao-lista"
+        onClick={() => props.removerTarefa(props.id)}
+      >
+        Remover
+      </button>
     </div>
   );
 }

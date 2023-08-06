@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./style.css";
 
-function CardAdicionar() {
+function CardAdicionar(props) {
   const [textoTarefa, setTextoTarefa] = useState("");
 
   const handleAdicionarTarefa = () => {
