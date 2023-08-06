@@ -4,6 +4,11 @@ import "./style.css";
 function CardAdicionar() {
   const [textoTarefa, setTextoTarefa] = useState("");
 
+  const handleAdicionarTarefa = () => {
+    props.adicionarTarefa(textoTarefa);
+    setTextoTarefa("");
+  };
+
   return (
     <>
       <input
